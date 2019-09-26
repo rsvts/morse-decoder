@@ -43,7 +43,7 @@ function decode(expr) {
 
         exprPart.match(/\d{10}/g).map((encodedLetter) =>
 
-            MORSE_TABLE[encodedLetter.match(/\d{2}/g).map(morseSign => {
+            MORSE_TABLE[encodedLetter.match(/\d{2}/g).map((morseSign) => {
 
                 if (morseSign == 10) return '.';
                 if (morseSign == 11) return '-';
